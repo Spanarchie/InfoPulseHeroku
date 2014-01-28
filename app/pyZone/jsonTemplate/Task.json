@@ -1,0 +1,46 @@
+{
+	"title": [
+		"taskGuid",
+		"tskRef",
+		"tskDesc",
+		"tskEstCost",
+		"tskEstTime"
+	],
+	"data": [
+		[
+			"927F1569-D1B8-41AE-D61B-3C34F50942D9",
+			"tsk001-Initialisation",
+			"This covers the initialising steps to get ready for any Project",
+			"750",
+			"20h"
+		],
+		[
+			"997F1569-D1B8-41AE-D61B-3C84F36942D9",
+			"tsk900-Completion",
+			"This covers the initialising steps to get ready for any Project",
+			"1750",
+			"30h"
+		],
+		[
+			"992F1569-D1B8-41AE-D61B-3C44F50942D9",
+			"tsk100-Printed Media",
+			"This covers the initialising steps to get ready for any Project",
+			"3750",
+			"40h"
+		],
+		[
+			"CF6E1122-729D-2345-DD02-65CF27892BE7",
+			"tsk200-Digital Media",
+			"This covers the initialising steps to get ready for any Project",
+			"3750",
+			"40h"
+		],
+		[
+			"CF6E1122-729D-2345-DD02-65CF23452BE7",
+			"tsk300-Visual Media",
+			"This covers the initialising steps to get ready for any Project",
+			"3750",
+			"40h"
+		]
+	]
+}

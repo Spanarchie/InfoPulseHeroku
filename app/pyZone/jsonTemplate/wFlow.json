@@ -1,0 +1,52 @@
+{
+	"title": [
+		"wflowGuid",
+		"wflowRef",
+		"wflowDesc",
+		"wflowList",
+		"wflowEstCost",
+		"wflowEstTime"
+	],
+	"data": [
+		[
+			"WF1F1569-D1B8-41AE-D61B-3C34F50942D9",
+			"wflow000 - AD_HOC workflow fixed price job",
+			"This covers the tracking of an adhoc Project",
+			[],
+			0,
+			0
+		],
+		[
+			"WF2F1569-D1B8-41AE-D61B-3C84F36942D9",
+			"twflow100 - Printed Magazine Completion",
+			"This covers the initialising steps to get ready for any Project",
+			["tsk001","tsk100","tsk900"],
+			0,
+			0
+		],
+		[
+			"WF3F1569-D1B8-41AE-D61B-3C44F50942D9",
+			"wflow150 - Newspaper Advert with related interactive digital Media",
+			"This covers the initialising steps to get ready for any Project",
+			["tsk001","tsk100","tsk200","tsk900"],
+			0,
+			0
+		],
+		[
+			"WF4E1122-729D-2345-DD02-65CF27892BE7",
+			"wflow200 - Digital promotional DVD",
+			"This covers the initialising steps to get ready for any Project",
+			["tsk001","tsk200","tsk900"],
+			0,
+			0
+		],
+		[
+			"WF5E1122-729D-2345-DD02-65CF23452BE7",
+			"wflow310 - TV Video Advert",
+			"This covers the creation of a single language TV Video Advert",
+			["tsk001","tsk300","tsk900"],
+			0,
+			0
+		]
+	]
+}

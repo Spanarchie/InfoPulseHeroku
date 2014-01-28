@@ -1,0 +1,103 @@
+body, html {
+	background-color: lightblue;
+	font: normal normal normal 1em/1.5em Helvetica, sans-serif;
+}
+pre { font-family: monospace;}
+
+
+
+	#pagewrap {
+		margin: 0 auto;
+		width: 700px;
+	}
+			
+			#search {
+				-webkit-border-radius: 10px;
+				background-color: white;
+				padding: 10px;
+				position: fixed;
+				right:40px;
+				display: none;
+			}
+			
+			
+			#body {
+				
+			}
+				table {
+					background-color: white;
+					-webkit-border-radius: 10px;
+					width: 100%;
+					padding: 10px;
+				}
+				th.sortable {
+					color: #666;
+					cursor: pointer;
+					text-decoration: underline;
+				}
+				th.sortable:hover { color: black; }
+				th.sorted-asc, th.sorted-desc  { color: black; }
+
+				td {
+					background-color: white;
+				}
+				td.odd {
+					background-color: #666;
+					color: white;
+				}
+				
+				td.hovered {
+				  background-color: lightblue;
+				  color: #666;
+				}
+
+			#footer{
+				background-color:#F6E4F5;
+				border:1px solid white;
+				bottom:1px;
+				float:left;
+				width:100%;
+				z-index:1;
+			}
+
+			pre{
+				background-color:rgba(255, 255, 255, 0.35);
+				color:#888888;
+				font-family:Arial,Helvetica,sans-serif;
+				font-size:10px;
+				margin-top:10px;
+				padding:10px;
+			}
+
+			pre b{
+				color:black;
+				font-weight:normal;
+			}
+
+			#connect ul.icons{
+			    list-style: none;
+			}
+			#connect ul.icons li a {
+			    text-indent: -9999px;
+			    background-image: url('http://c3it.webuda.com/IMG/iconset.gif');
+			    width: 25px;
+			    height: 25px;
+			    display: block;
+			    float :right;
+			}
+			#connect li a.blogger{background-position:25px 0px; }
+			#connect li a.blogger:hover{background-position:25px 25px;}
+
+			#connect li a.linkdin{background-position:75px 0px;}
+			#connect li a.linkdin:hover{background-position:75px 25px;}
+
+			#connect li a.facebook{background-position:100px 0px;}
+			#connect li a.facebook:hover{background-position:100px 25px;}
+
+			#connect li a.twitter{background-position:50px 0px;}
+			#connect li a.twitter:hover{background-position:50px 25px;}
+
+canvas{
+	
+}
+

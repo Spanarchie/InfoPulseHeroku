@@ -1,0 +1,64 @@
+{
+	"title": [
+		"userGuid",
+		"fName",
+		"lName",
+		"DoB",
+		"email",
+		"Works_for",
+		"role",
+		"skill"
+	],
+	"data": [
+		[
+			"997F0569-D1B8-41AE-D61B-3C84F50942D9",
+			"Martin",
+			"Mcmillan",
+			"19/04/07",
+			"imanagedthis1@gmail.com",
+			"InfoPulse",
+			"SysAdmin",
+			"ProjectMgt"
+		],
+		[
+			"C5179463-41FD-1817-AB50-295B1D77AE38",
+			"Colin",
+			"Moore-Hill",
+			"09/04/69",
+			"idesignedthis1@gmail.com",
+			"SpanarchianSolutions",
+			"Admin",
+			"Director"
+		],
+		[
+			"9863EC04-26B3-52DB-C6EB-342AAE7F8EC1",
+			"Joel",
+			"Gill",
+			"09/04/71",
+			"idevelopedthis1@gmail.com",
+			"UX3",
+			"Admin",
+			"Director"
+		],
+		[
+			"CF6EE122-729D-2345-DD02-65CF27892BE7",
+			"Luis",
+			"Bustos",
+			"09/04/71",
+			"itestedthis1@gmail.com",
+			"Luis Analysis",
+			"Admin",
+			"Director"
+		],
+		[
+			"CC0BA974-4754-EA01-9977-B522D4AC091F",
+			"Franchesco",
+			"Corlione",
+			"09/04/75",
+			"iarchitectedthis1@gmail.com",
+			"FranklyFranco",
+			"Admin",
+			"Director"
+		]
+	]
+}

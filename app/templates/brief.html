@@ -1,0 +1,17 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if session['signedIn'] %}
+    <h1>Hi, {{user.nickname}} {{session['role']}} !</h1>
+{% else %}
+    <h1>Hi, {{user.nickname}} L5 !</h1>
+{% endif %}
+
+{% for post in posts %}
+<p>
+  {{post.Project}} says: <b>{{post.Budget}}</b>
+</p>
+{% endfor %}
+{% endblock %}

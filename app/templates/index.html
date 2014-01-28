@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>InfoPulseCoUk - Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="/static/js/awesomechart.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="/static/js/functions.js"></script>
+	<link rel="stylesheet" href="./static/css/styleier.css">
+</head>
+
+<body class="body">
+	
+	<header class="mainHeader">
+		
+		<table style="width: 100%">
+			<tr>
+				<td><img id="logoImg" src="/static/img/spanarchian/logo.gif"></td>
+		
+				<td style="text-align:right"><h1>Company Name - Admin</h1>
+					<h2>An example of HTML5 and CSS3 in action</h2></td>
+				</div>
+			</tr>
+		</table>
+		<nav><ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">CLient</a></li>
+			<li><a href="#">Users</a></li>
+			<li><a href="#">Brief</a> </li>
+			<li><a href="#">Jobs</a></li>
+			<li><a href="#">Tasks</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul></nav>
+	</header>
+		
+	<div class="mainContent">
+		<div class="content">	
+				<article class="topcontent">	
+					<header>
+						<h2><a href="#" rel="bookmark" title="Current">Active Work :</a></h2>
+					</header>
+					
+					<footer>
+						<p class="update-info">As of the 22nd of Jan 2014</p>
+					</footer>
+					
+					<content>
+						<div id="topcontent">
+							<form id="frmCadastre">
+						        <ul>
+						            <li>
+						                <label for="txtID">ID:</label>
+						                <input type="text" id="txtID"/>
+						            </li>
+						            <li>
+						                <label for="txtName">Name:</label>
+						                <input type="text" id="txtName"/>
+						            </li>
+						            <li>
+						                <label for="txtPhone">Phone:</label>
+						                <input type="text" id="txtPhone"/>
+						            </li>
+						            <li>
+						                <label for="txtEmail">Email:</label>
+						                <input type="text" id="txtEmail"/>
+						            </li>
+						            <li>
+						                <input type="submit" value="Save" id="btnSave"/>
+						            </li>
+						        </ul>
+						    </form>
+						</div>	
+
+					</content>
+					
+				</article>
+
+				<article class="bottomcontent">	
+					<header>
+						<h2><a  href="#" rel="bookmark" title="Permalink to this POST TITLE">Work Listing:</a></h2>
+					</header>
+
+					<footer>
+						<p class="post-info">This was posted on the 5th of March 2013 by Christian Vasile</p>
+					</footer>
+					
+					<content>
+						<div class="listing">
+						  <ul>
+						    <li>
+						      	<img id="listImg" src="http://lorempixum.com/100/100/nature/1" >
+						      	<h3>The Audio Worflow</h3>
+								<p>Duration : 4days, Cost : 1250, 
+						          Task List : [01, 12, 14, 17, 89, 05].</p>
+						    </li>
+						      
+						    <li>
+						      	<img id="listImg" src="http://lorempixum.com/100/100/nature/2" >
+						      	<h3>Paradise Found</h3>
+						      	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+						    </li>
+
+						    <li>
+						      <img id="listImg" src="http://lorempixum.com/100/100/nature/3" >
+						      <h3>Smoke On The Water</h3>
+						      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+						    </li>
+
+						    <li>
+						      <img id="listImg" src="http://lorempixum.com/100/100/nature/4" >
+						      <h3>Headline</h3>
+						      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod ultrices ante, ac laoreet nulla vestibulum adipiscing. Nam quis justo in augue auctor imperdiet.</p>
+						    </li>
+						  </ul>
+						</div>
+					</content>
+				
+				</article>
+		</div>
+			
+				<aside class="top-sidebar">
+					<article>
+					<h2>Data Stats.</h2>
+					<div class="chart_container">
+			            <canvas id="chartStatus" width="300" height="300">
+			                Your web-browser does not support the HTML 5 canvas element.
+			            </canvas>      
+			        </div>
+				    </article>
+				</aside>
+				
+				<aside class="middle-sidebar">
+					<article>
+					<h2>Work Status Report :</h2>
+					<div class="chart_container">
+			            <canvas id="chartStatus2" width="300" height="300">
+			                Your web-browser does not support the HTML 5 canvas element.
+			            </canvas>      
+			        </div>
+					</article>
+				</aside>				
+
+				<aside class="bottom-sidebar">
+					<article>
+						<h2>Bottom Listing :</h2>
+						<table id="tblList">
+	    				</table>
+				    </article>
+				</aside>	
+	</div>
+	
+	<footer class="mainFooter">
+		<p>Copyright &copy; 2013 <a href="http://solution.spanarchian.co.uk">Spanarchian Solutions</a></p>
+		<div id="connect">
+			<ul class="icons">
+			    <li><a class="blogger" href="#blogger">a</a></li>
+			    <li><a class="linkdin" href="#linkd">b</a></li>
+			    <li><a class="facebook" href="#facebook">c</a></li>
+			    <li><a class="twitter" href="#twit">d</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script type="application/javascript">
+	    var chart1 = new AwesomeChart('chartStatus');
+	    chart1.title = " Status : Progress ";
+	    chart1.data = [6,3,1,2,3];
+	    chart1.labels = ['Awaiting','In-Progress','Blocked','Suspended','Closed'];
+	    chart1.colors = ['#006CFF', '#FF6600', '#34A038', '#945D59', '#93BBF4'];
+	    chart1.randomColors = true;
+	    chart1.draw();  
+
+	    var chart2 = new AwesomeChart('chartStatus2');
+	    chart2.chartType = 'doughnut';
+	    chart2.title = " Status : Progress ";
+	    chart2.data = [6,3,1,2,3];
+	    chart2.labels = ['Awaiting','In-Progress','Blocked','Suspended','Closed'];
+	    chart2.colors = ['#006CFF', '#FF6600', '#34A038', '#945D59', '#93BBF4'];
+	    chart2.randomColors = true;
+	    chart2.draw();  
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>InfoPulseCoUk - Home</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="/static/js/awesomechart.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="/static/js/functions.js"></script>
+	<link rel="stylesheet" href="./static/css/styleier.css">
+	{% block headblock %} {% endblock %}
+</head>
+
+<body class="body">
+	
+	<header class="mainHeader">
+			{% block mainHeader %}
+			{% endblock %}
+
+			{% block mainNav %}
+			{% endblock %}
+	</header>
+
+	<div class="mainContent">
+		<div class="content">
+			{% block mainForm %}
+			{% endblock %}
+
+			{% block mainListing %}
+			{% endblock %}
+		</div>
+
+		{% block sideTop%}
+		{% endblock %}
+		{% block sideMid%}
+		{% endblock %}
+		{% block sideBot%}
+		{% endblock %}
+
+	</div>
+
+	<footer class="mainFooter">
+		{% block mainFooter %} {% endblock %}
+	</footer>
+
+	<script type="application/javascript">
+	    var chart1 = new AwesomeChart('chartStatus');
+	    chart1.title = " Status : Progress ";
+	    chart1.data = {% block sideData%}
+		{% endblock %};
+	    chart1.labels = ['Awaiting','In-Progress','Blocked','Suspended','Closed'];
+	    chart1.colors = ['#006CFF', '#FF6600', '#34A038', '#945D59', '#93BBF4'];
+	    chart1.randomColors = true;
+	    chart1.draw();  
+
+	    var chart2 = new AwesomeChart('chartStatus2');
+	    chart2.chartType = 'doughnut';
+	    chart2.title = " Status : Progress ";
+	    chart2.data = [6,3,1,2,3];
+	    chart2.labels = ['Awaiting','In-Progress','Blocked','Suspended','Closed'];
+	    chart2.colors = ['#006CFF', '#FF6600', '#34A038', '#945D59', '#93BBF4'];
+	    chart2.randomColors = true;
+	    chart2.draw();  
+	</script>
+
+</body>
+</html>
+
+
