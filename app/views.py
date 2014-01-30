@@ -7,22 +7,22 @@ access = {"admin":"L1", "colin":"L5"}
 
 @app.route('/')
 def entrypoint():
-    return render_template('index.html')
+    return render_template('landing.html')
 
 @app.route('/router')
 def router():
+    pageSpec = webData.getPageDetail(session['username'], session['role'])
     return render_template('routerFill.html')
 
-@app.route('/brief')
-def brief():
-    formBrief, BriefReports = webData.getBriefData()
-    return render_template('brief.html',
-        title = 'Brief',
-        user = formBrief,
-        posts = BriefReports)
+@app.route('/routed')
+def routed():
+    pageSpec = webData.getPageDetail(session['username'], session['role'])
+    return render_template('routerFiller.html', layout = pageSpec)
+
+
 
 users = {'admin':'default','joel':'bacon','luis':'bacon','colin':'bacon'}
-uAtts = {'admin':{'role':'Admin', 'emp':'Nike'},'joel':{'role':'Client', 'emp':'UX3'},'luis':{'role':'Analyst', 'emp':'MagicLuis'},'colin':{'role':'DemiGod', 'emp':'Spanarchian.co.uk'}}
+uAtts = {'admin':{'role':'Admin', 'emp':'Nike'},'joel':{'role':'Admin', 'emp':'UX3'},'luis':{'role':'Manager', 'emp':'MagicLuis'},'colin':{'role':'Worker', 'emp':'Spanarchian.co.uk'}}
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -44,7 +44,7 @@ def login():
             session['role'] = data['role']
             session['emp'] = data['emp']
             flash('You were logged in')
-            return redirect(url_for('brief'))
+            return redirect(url_for('routed'))
         else:
             flash("Username doesn't exist or incorrect password")
             return render_template('landing.html', error=error)

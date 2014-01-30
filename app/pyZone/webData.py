@@ -1,30 +1,20 @@
-def getUserData():
-    formBrief = { 'nickname': 'Spanarchian' }
-    BriefReports = [
-        { 
-            'Client': 'HSBC', 
-            'Project': 'Beautiful Portland!',
-            'DueDate': '15/02/2014',
-            'Budget' : 12500,
-            'Acc_Mgr' : 'imanagedthis1@gmail.com',
-            'Created_by' : 'idesignedthis1@gmail.com'
-        }]
-    resp = [formBrief, BriefReports ]
-    return resp
+from flask import Markup
 
-def getCompanyData():
-    formBrief = { 'nickname': 'Spanarchian' }
-    BriefReports = [
-        { 
-            'Client': 'HSBC', 
-            'Project': 'Beautiful Portland!',
-            'DueDate': '15/02/2014',
-            'Budget' : 12500,
-            'Acc_Mgr' : 'imanagedthis1@gmail.com',
-            'Created_by' : 'idesignedthis1@gmail.com'
-        }]
-    resp = [formBrief, BriefReports ]
-    return resp
+def getTicker(user):
+    pass
+
+def getNav(role):
+    if (role == "Admin"):
+        navr =  Markup('<nav><ul><li class="active"><a href="#">Home</a></li><li><a href="#">Client</a></li><li><a href="#">Users</a></li><li><a href="#">Brief</a> </li><li><a href="#">Jobs</a></li><li><a href="#">Tasks</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li>')
+    if (role == "Manager"):
+        navr =  Markup('<nav><ul><li class="active"><a href="#">Home</a></li></li><li><a href="#">Brief</a> </li><li><a href="#">Jobs</a></li><li><a href="#">Tasks</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li>')
+    if (role == "Project"):
+        navr =  Markup('<nav><ul><li class="active"><a href="#">Home</a></li><li><a href="#">Jobs</a></li><li><a href="#">Tasks</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li>')
+    if (role == "Worker"):
+        navr =  Markup('<nav><ul><li class="active"><a href="#">Home</a></li><li><a href="#">Tasks</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li>')
+    if (role == "Admin"):
+        navr =  Markup('<nav><ul><li class="active"><a href="#">Home</a></li><li><a href="#">Client</a></li><li><a href="#">Users</a></li><li><a href="#">Brief</a> </li><li><a href="#">Jobs</a></li><li><a href="#">Tasks</a></li><li><a href="#">Contact</a></li><li><a href="#">About</a></li>')
+    return navr
 
 def getlatest(user):
     pass
@@ -32,58 +22,18 @@ def getlatest(user):
 def getlisting(user):
     pass
 
+def getStats(user):
+    return [3,5,8,7,9]
+
+def getRprt(user):
+    return [5,3,4,7,4]
 
 
-
-
-
-
-
-
-
-
-
-
-def getBriefData():
-    formBrief = { 'nickname': 'Spanarchian' }
-    BriefReports = [
-        { 
-            'Client': 'HSBC', 
-            'Project': 'Beautiful Portland!',
-            'DueDate': '15/02/2014',
-            'Budget' : 12500,
-            'Acc_Mgr' : 'imanagedthis1@gmail.com',
-            'Created_by' : 'idesignedthis1@gmail.com'
-        }]
-    resp = [formBrief, BriefReports ]
-    return resp
-
-
-def getJobData():
-    formBrief = { 'nickname': 'Spanarchian' }
-    BriefReports = [
-        { 
-            'Client': 'HSBC', 
-            'Project': 'Beautiful Portland!',
-            'DueDate': '15/02/2014',
-            'Budget' : 12500,
-            'Acc_Mgr' : 'imanagedthis1@gmail.com',
-            'Created_by' : 'idesignedthis1@gmail.com'
-        }]
-    resp = [formBrief, BriefReports ]
-    return resp
-
-
-def getTaskData():
-    formBrief = { 'nickname': 'Spanarchian' }
-    BriefReports = [
-        { 
-            'Client': 'HSBC', 
-            'Project': 'Beautiful Portland!',
-            'DueDate': '15/02/2014',
-            'Budget' : 12500,
-            'Acc_Mgr' : 'imanagedthis1@gmail.com',
-            'Created_by' : 'idesignedthis1@gmail.com'
-        }]
-    resp = [formBrief, BriefReports ]
-    return resp
+def getPageDetail(usr, rle):
+    nav = getNav(rle)
+    topBlock = getlatest(usr)
+    botBlock = getlisting(usr)
+    stats = getStats(usr)
+    rprt = getRprt(usr)
+    ticker = getTicker(usr)
+    return [nav, topBlock, botBlock, stats, rprt, ticker ]
