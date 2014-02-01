@@ -22,7 +22,7 @@ def routed():
 
 
 users = {'admin':'default','joel':'bacon','luis':'bacon','colin':'bacon'}
-uAtts = {'admin':{'role':'Admin', 'emp':'Nike'},'joel':{'role':'Admin', 'emp':'UX3'},'luis':{'role':'Manager', 'emp':'MagicLuis'},'colin':{'role':'Worker', 'emp':'Spanarchian.co.uk'}}
+uAtts = {'admin':{'role':'Admin', 'emp':'Nike'},'joel':{'role':'Admin', 'emp':'UX3'},'luis':{'role':'Manager', 'emp':'MagicLuis'},'colin':{'role':'Worker', 'emp':'spanarchian'}}
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

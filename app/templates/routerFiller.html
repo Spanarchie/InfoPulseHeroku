@@ -2,12 +2,22 @@
 {% extends "router.html" %}
 
 	{% block headblock %}
+		<script>
+			var monthNames = [ "January", "February", "March", "April", "May", "June",
+				"July", "August", "September", "October", "November", "December" ];
+			var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+			var newDate = new Date();
+			newDate.setDate(newDate.getDate() + 1);
+			$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+		</script>
 	{% endblock %}
 	
 	{% block mainHeader %}
 	<table style="width: 100%">
 			<tr>
-				<td><img id="logoImg" src="/static/img/spanarchian/logo.gif"></td>
+				<td><img id="logoImg" src="/static/img/{{session['emp']}}/logo.gif"></td>
 		
 				<td style="text-align:right"><h1>{{session['emp']}} - {{session['role']}}</h1>
 					<h2>An example of HTML5 and CSS3 in action</h2></td>
@@ -33,7 +43,7 @@
 					</header>
 					
 					<footer>
-						<p class="update-info">As of the 22nd of Jan 2014</p>
+						<p class="update-info">As of <span id="Date"></span></p>
 					</footer>
 					
 					<content>

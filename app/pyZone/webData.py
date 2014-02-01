@@ -23,10 +23,10 @@ def getlisting(user):
     pass
 
 def getStats(user):
-    return [3,5,8,7,9]
+    return [3,6,8,7,9]
 
 def getRprt(user):
-    return [5,3,4,7,4]
+    return [5,4,4,7,4]
 
 
 def getPageDetail(usr, rle):

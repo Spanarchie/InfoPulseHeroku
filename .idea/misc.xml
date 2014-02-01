@@ -63,10 +63,6 @@
     <option white="false" />
     <option maxerr="50" />
   </component>
-  <component name="JSLintConfiguration">
-    <option indent="4" />
-    <option maxerr="50" />
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
